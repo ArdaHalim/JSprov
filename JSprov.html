@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- uppgift 1 -->
+    <h1 id="test">Hej</h1>
+    <button onclick="ChangeColor()">ändra färgen</button>
+
+    <!-- uppgift2 -->
+    <p id="demo">Klicka på mig fär att visa "hej"</p>
+    <button onclick="ShowText()">Visa text</button>
+
+    <!-- uppgift 5 -->
+    <form>
+        <label>Skriv in text:</label>
+        <input type="text" id="text_input" name="text_input">
+        <button type="button" onclick="ShowFormText()">Visa text</button>
+    </form>
+
+    <script>
+
+        // uppgift 1
+    function ChangeColor()
+    {
+        var h1Element = document.getElementById("test")
+        h1Element.style.color = "red";
+    }
+
+    // uppgift 2
+    function ShowText()
+    {
+        var demoElement = document.getElementById("demo");
+        demoElement.innerHTML = "Hej";
+
+    }
+
+    // uppgift 3
+    function ArrayMultipliedBy5(arr)
+    {
+       var result = [];
+       for (var i = 0; i < arr.length; i++) 
+       {
+            result.push(arr[i] * 5);
+       }
+       return result;
+    }
+    var OriginalArray = [1, 2, 3, 4, 5];
+    var MultipliedArray = ArrayMultipliedBy5(OriginalArray);
+    console.log("array innan multiplikation: " + OriginalArray)
+    console.log("arrat efter multiplikation: " + MultipliedArray);
+
+    // uppgift 4
+    function multiplyNumbers(num1, num2) {
+    return num1 * num2;
+    }
+    var result = multiplyNumbers(2, 2);
+    console.log("2*2 = " + result); // 4
+
+    // uppgift 5
+        function ShowFormText() {
+            var textInput = document.getElementById("text_input").value;
+
+            console.log(textInput);
+        }
+    </script>
+</body>
+</html>
